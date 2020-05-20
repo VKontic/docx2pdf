@@ -1,0 +1,57 @@
+body{
+	margin:0;
+	padding: 0;
+	background-color: #3D72C2;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.welcomeText{
+	color: white;
+	text-align: center;
+	margin: 3rem 5rem;
+}
+.welcomeText h1{
+	font-size: 2.5rem;
+}
+.welcomeText p{
+	font-size: 2rem;
+}
+.chooseFile{
+	border: 2px dotted white;
+    padding: 1rem 3rem 3rem 3rem;
+    width: 25%;
+    margin: auto;
+    background-color: #5486D5;
+    text-align: center;
+}
+.chooseFile p{
+	font-size: 1.5rem;
+    color: white;
+    font-weight: 500
+}
+#file{
+	display: none;
+}
+.chooseFile label{
+	display: block;
+    color: white;
+    font-weight: 500;
+    background-color: #FE7600;
+    padding: 0.7rem 1.8rem;
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btnDownloadPDF{
+	margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    background-color: #D8D8D8;
+    border: 0;
+    border-radius: 5px;
+    color: #333333;
+    font-weight: 500;
+    font-family: "Roboto";
+    cursor: pointer;
+}
