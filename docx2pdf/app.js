@@ -45,7 +45,7 @@ app.post('/upload', function(req, res, next) {
         const name = file.name;
         const type = file.mimetype;
         const uploadpath = __dirname + '/uploads/' + name;
-
+        res.send({usli:"da"});
         if (type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
             //validation on backend side (there is also front-end validation for doc type)
             file.mv(uploadpath, function(err) {
