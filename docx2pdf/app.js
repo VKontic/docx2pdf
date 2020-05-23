@@ -39,14 +39,13 @@ app.get('/', (req, res) => {
 
 app.post('/upload', function(req, res, next) {
 
-res.send({usli:"odmah"});
     if (req.files.wordFile) {
 
         const file = req.files.wordFile;
         const name = file.name;
         const type = file.mimetype;
         const uploadpath = __dirname + '/uploads/' + name;
-        res.send({usli:"da"});
+
         if (type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
             //validation on backend side (there is also front-end validation for doc type)
             file.mv(uploadpath, function(err) {
@@ -55,6 +54,7 @@ res.send({usli:"odmah"});
                 } else {
                     convertapi.convert('pdf', { File: `uploads/${name}` }, 'docx')
                         .then(result => {
+                            res.send({usli:"i ovdje"});
                             result.saveFiles(`storage/`)
                             let fileName = result.response.Files[0].FileName;
                             let url = result.response.Files[0].Url;
