@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PDF converter</title>
+    <link href="/css/home.css" rel="stylesheet" type="text/css">
+    <link href="/css/modal.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/my-icons-collection/font/flaticon.css">
+    <script src="/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="unnamed.jpg" alt="icon">
+        <p>Free Docx-Pdf Converter</p>
+        <span>{{ conversions }} <span>Documents Converted<span></span>
+    </header>
+    <div class="welcomeText">
+        <h1>Convert Word to PDF Documents Online for FREE</h1>
+        <p>Our online tool allows you to convert Word Documents to PDF for free. No downloads required</p>
+    </div>
+    <section class="chooseFile">
+        <p>Drag & Drop the File Here </p>
+        <label for="file" class="custom-file-upload"> <i class="flaticon-zoom"></i> Choose File <div id="spinner"></div>
+        </label>
+        <input id="file" name="wordFile" type="file" />
+        <button class="btnDownloadPDF">Download PDF</button>
+        <div class="sendMailSection">
+            <input type="email" name="email" placeholder="Enter email..." required class="inputEmail">
+            <button class="btnSendMail">Send me PDF! <div id="spinner2"></div> </button>
+            <!-- <input class="btnSendMail" type="submit" value="Send me PDF!">	 -->
+        </div>
+    </section>
+    <div class="purchaseModal">
+        <div class="purchaseModalContent">
+            <section class="purchaseModalHeader">
+                <p class="purchaseModalHeaderText">Error!</p>
+            </section>
+            <div class="purchaseModalBody">
+                <p>Please choose document with docx/doc extension!</p>
+            </div>
+            <section class="purchaseModalFooter">
+                <button class="btnClosePurchaseModal">Close</button>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #3D72C2;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.welcomeText {
+    color: white;
+    text-align: center;
+    margin: 3rem 5rem;
+}
+
+.welcomeText h1 {
+    font-size: 2.5rem;
+}
+
+.welcomeText p {
+    font-size: 2rem;
+}
+
+.chooseFile {
+    border: 2px dotted white;
+    padding: 1rem 3rem 3rem 3rem;
+    width: fit-content;
+    width: -moz-max-content;
+    min-width: 25%;
+    margin: auto;
+    background-color: #5486D5;
+    text-align: center;
+}
+
+.chooseFile p {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 500
+}
+
+#file {
+    display: none;
+}
+
+.chooseFile label {
+    background-color: #e5832e;
+    display: block;
+    color: white;
+    font-weight: 500;
+    padding: 0.7rem 1.8rem;
+    width: fit-content;
+    width: -moz-max-content;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.chooseFile label:hover {
+    background-color: #FE7600;
+}
+
+input[type="email"] {
+    padding: 0.6rem;
+    margin-top: 1rem;
+    border-radius: 20px;
+    color: black;
+    border: 0;
+    padding-left: 1rem;
+}
+
+input[type="email"]:focus {
+    outline: 0;
+    border: 1px solid black;
+}
+
+.sendMailSection {
+    display: none;
+}
+
+.mailSectionActive {
+    display: block;
+}
+
+.btnSendMail {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: #708dbc;
+    border: 1px solid white;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.btnSendMail:focus,
+.btnDownloadPDF:focus {
+    outline: 0;
+}
+
+.btnSendMail:hover {
+    background-color: #4066a2;
+}
+
+.btnDownloadPDF {
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    background-color: #D8D8D8;
+    border: 0;
+    border-radius: 5px;
+    color: #333333;
+    font-weight: 500;
+    font-family: "Roboto";
+}
+
+.btnDownloadActive {
+    box-shadow: 0px 0px 10px 3px #d6e6dd;
+    cursor: pointer;
+    background-color: #1ccf0f;
+    color: white;
+}
+
+.btnDownloadActive:focus {
+    outline: 0;
+}
+
+#spinner,
+#spinner2 {
+    float: right;
+    display: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid #f3f3f3;
+    border-top: 3px solid #0026fe;
+    border-radius: 100%;
+    animation: spin 1s infinite linear;
+    margin-left: 0.5rem;
+    margin-top: -0.2rem;
+}
+
+#spinner2 {
+    width: 1rem;
+    height: 1rem;
+}
+
+header {
+    background-color: #e8e8e8;
+    background: 5778a9;
+    height: 3.5rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+}
+
+header img {
+    height: 3.5rem;
+    width: auto;
+    grid-column: 2;
+}
+
+header p {
+    grid-column: 5/9;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    font-weight: 300;
+}
+
+header span {
+    grid-column: 10/13;
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+header span span {
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#spinner.show,
+#spinner2.show {
+    display: inline;
+}
