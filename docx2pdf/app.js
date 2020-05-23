@@ -39,6 +39,7 @@ app.get('/', (req, res) => {
 
 app.post('/upload', function(req, res, next) {
 
+res.send({usli:"odmah"});
     if (req.files.wordFile) {
 
         const file = req.files.wordFile;
