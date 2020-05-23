@@ -48,17 +48,18 @@ app.post('/upload', function(req, res, next) {
 
         if (type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
             //validation on backend side (there is also front-end validation for doc type)
+             res.send({usli:"i ovdje"});
             file.mv(uploadpath, function(err) {
                 if (err) {
                     res.send("File uploading error! ", error)
                 } else {
                     convertapi.convert('pdf', { File: `uploads/${name}` }, 'docx')
                         .then(result => {
-                            res.send({usli:"i ovdje"});
+                           
                             result.saveFiles(`storage/`)
                             let fileName = result.response.Files[0].FileName;
                             let url = result.response.Files[0].Url;
-                            let conversionsNumber = incrementconversions();
+                            let conversionsNumber = invrementConversions();
                             deleteFile(name); //delete docx file from server storage
                             res.send({ fileName, url, conversionsNumber }); //frontu saljemo ime fajla, download link i br konvertovanja
                         })
@@ -107,7 +108,7 @@ function readconversionsFile() {
     return data;
 }
 
-function incrementconversions() {
+function invrementConversions() {
     let data = readconversionsFile();
     let newNumber = Number(data) + 1;
     fs.writeFileSync('public/conversionsNumber.txt', newNumber);
