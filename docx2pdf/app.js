@@ -10,7 +10,7 @@ const convertapi = require('convertapi')(process.env.API_KEY);
 
 const app = express();
 app.use(upload());
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 
