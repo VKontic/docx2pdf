@@ -51,7 +51,8 @@ app.post('/upload', function(req, res, next) {
             //OVDJE RADI
             file.mv(uploadpath, function(err) {
                 if (err) {
-                    res.send("File uploading error! ");
+                    console.log(err);
+                    res.send({file_uploaded:"false"});
                 } else {
                     res.send({usli:"i ovdje"});
                     convertapi.convert('pdf', { File: `uploads/${name}` }, 'docx')
