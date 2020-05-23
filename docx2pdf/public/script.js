@@ -31,8 +31,8 @@ inputFile.addEventListener('change', () => {
                 spinner.classList.remove("show"); //stop spinner loading
                 if (response.ok) {
                     return response.json();
-                } else {
-                    throw new Error("Problem on server side. Response status: ", response.status);
+                } else (err){
+                    throw new Error("Problem on server side", err);
                 }
             })
             .then(data => {
