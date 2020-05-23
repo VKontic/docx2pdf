@@ -54,7 +54,6 @@ app.post('/upload', function(req, res, next) {
                     console.log(err);
                     res.send({file_uploaded:"false"});
                 } else {
-                    res.send({usli:"i ovdje"});
                     convertapi.convert('pdf', { File: `uploads/${name}` }, 'docx')
                         .then(result => {
                            

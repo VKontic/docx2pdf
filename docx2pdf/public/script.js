@@ -23,7 +23,7 @@ inputFile.addEventListener('change', () => {
         spinner.className = "show";
         const formData = new FormData();
         formData.append('wordFile', inputFile.files[0]);
-        fetch('https://docx2pdfapp.herokuapp.com/upload', {
+        fetch('http://localhost:3000/upload', {
                 method: 'POST',
                 body: formData
             })
@@ -61,7 +61,7 @@ function sendMail() {
             formData.append('email', inputMail.value);
             formData.append('fileName', fileName);
 
-            fetch('https://docx2pdfapp.herokuapp.com/sendmail', {
+            fetch('http://localhost:3000/sendmail', {
                     method: 'POST',
                     body: formData
                 })
