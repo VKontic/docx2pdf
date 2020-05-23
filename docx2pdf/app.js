@@ -48,11 +48,12 @@ app.post('/upload', function(req, res, next) {
 
         if (type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
             //validation on backend side (there is also front-end validation for doc type)
-             res.send({usli:"i ovdje"});
+            //OVDJE RADI
             file.mv(uploadpath, function(err) {
                 if (err) {
                     res.send("File uploading error! ", error)
                 } else {
+                    res.send({usli:"i ovdje"});
                     convertapi.convert('pdf', { File: `uploads/${name}` }, 'docx')
                         .then(result => {
                            
