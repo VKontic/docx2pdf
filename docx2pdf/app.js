@@ -18,7 +18,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'vkontic11@gmail.com',
+        user: 'example@gmail.com',
         pass: process.env.PASSWORD
     }
 });
@@ -83,7 +83,7 @@ app.post("/sendmail", function(req, res) {
     let email = req.body.email;
     let fileName = req.body.fileName;
     var mailOptions = {
-        from: 'vkontic11@gmail.com',
+        from: 'example@gmail.com',
         to: email,
         subject: 'PDF File',
         attachments: [{
